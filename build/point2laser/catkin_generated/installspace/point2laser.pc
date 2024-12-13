@@ -1,0 +1,8 @@
+prefix=/home/joey/Desktop/Jps2044_Final/install
+
+Name: point2laser
+Description: Description of point2laser
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

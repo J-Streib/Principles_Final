@@ -1,0 +1,21 @@
+<launch>
+  <node name="pointcloud_to_laserscan" pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" output="screen">
+    <!-- Input PointCloud2 topic -->
+    <param name="input_topic" value="points" />
+    
+    <!-- Output LaserScan topic -->
+    <param name="output_topic" value="/scan" />
+    
+    <!-- TF frame for the output LaserScan -->
+    <param name="target_frame" value="velodyne" />
+    
+    <!-- Parameters -->
+    <param name="min_height" value="0.0" />
+    <param name="max_height" value="1.0" />
+    <param name="angle_min" value="-3.14" /> <!-- -180 degrees -->
+    <param name="angle_max" value="3.14" />  <!-- 180 degrees -->
+    <param name="angle_increment" value="0.01" />
+    <param name="range_min" value="0.762" />
+    <param name="range_max" value="10.0" />
+  </node>
+</launch>
